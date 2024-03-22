@@ -43,6 +43,7 @@ $(document).ready(function () {
                         prevText = btnText + ', ';
                     }
                 });
+                console.log(button)
             });
         }
     // }, 500);
