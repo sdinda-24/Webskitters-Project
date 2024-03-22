@@ -24,30 +24,30 @@ $(document).ready(function () {
     });
 
     // setTimeout(function () {
-        function setCheckboxSelectLabels(elem) {
-            var wrappers = $('.filter-dropdown');
-            $.each(wrappers, function (key, wrapper) {
-                var checkboxes = $(wrapper).find('.ckkBox');
-                var label = $(wrapper).find('.event-list-wrapper-cms').attr('id');
-                var prevText = '';
-                $.each(checkboxes, function (i, checkbox) {
-                    var button = $(this).parents('.filter-dropdown').find('.filter-text');
-                    // console.log(button);
-                    // var button = $(wrapper).find('.filter-text');
-                    if ($(checkbox).prop('checked') == true) {
-                        var text = $(checkbox).next().html();
-                        var btnText = prevText + text;
-                        var numberOfChecked = $(wrapper).find('input.val:checkbox:checked').length;
-                        if (numberOfChecked >= 3) {
-                            btnText = numberOfChecked + ' ' + label + ' selected';
-                        }
-                        $(button).text(btnText);
-                        prevText = btnText + ', ';
+    function setCheckboxSelectLabels(elem) {
+        var wrappers = $('.filter-dropdown');
+        $.each(wrappers, function (key, wrapper) {
+            var checkboxes = $(wrapper).find('.ckkBox');
+            var label = $(wrapper).find('.event-list-wrapper-cms').attr('id');
+            var prevText = '';
+            $.each(checkboxes, function (i, checkbox) {
+                var button = $(this).parents('.filter-dropdown').find('.filter-text');
+                // console.log(button);
+                // var button = $(wrapper).find('.filter-text');
+                if ($(checkbox).prop('checked') == true) {
+                    var text = $(checkbox).next().html();
+                    var btnText = prevText + text;
+                    var numberOfChecked = $(wrapper).find('input.w-checkbox-input:checkbox:checked').length;
+                    if (numberOfChecked >= 3) {
+                        btnText = numberOfChecked + ' ' + label + ' selected';
                     }
-                });
-                // console.log(button)
+                    $(button).text(btnText);
+                    prevText = btnText + ', ';
+                }
             });
-        }
+            // console.log(button)
+        });
+    }
     // }, 500);
 
 
