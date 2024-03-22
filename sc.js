@@ -23,7 +23,7 @@ $(document).ready(function () {
         }
     });
 
-    setTimeout(function () {
+    // setTimeout(function () {
         function setCheckboxSelectLabels(elem) {
             var wrappers = $('.filter-dropdown');
             $.each(wrappers, function (key, wrapper) {
@@ -45,7 +45,7 @@ $(document).ready(function () {
                 });
             });
         }
-    }, 500);
+    // }, 500);
 
 
 });
