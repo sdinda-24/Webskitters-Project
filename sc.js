@@ -31,7 +31,9 @@ $(document).ready(function () {
                 var label = $(wrapper).find('.common-dropdown-list').attr('id');
                 var prevText = '';
                 $.each(checkboxes, function (i, checkbox) {
-                    var button = $(wrapper).find('.filter-text');
+                    var button = $(this).parents('.filter-dropdown').find('.filter-text').html();
+                    console.log(button);
+                    // var button = $(wrapper).find('.filter-text');
                     if ($(checkbox).prop('checked') == true) {
                         var text = $(checkbox).next().html();
                         var btnText = prevText + text;
@@ -43,7 +45,7 @@ $(document).ready(function () {
                         prevText = btnText + ', ';
                     }
                 });
-                console.log(button)
+                // console.log(button)
             });
         }
     // }, 500);
