@@ -28,7 +28,7 @@ $(document).ready(function () {
             var wrappers = $('.filter-dropdown');
             $.each(wrappers, function (key, wrapper) {
                 var checkboxes = $(wrapper).find('.ckkBox');
-                var label = $(wrapper).find('.common-dropdown-list').attr('id');
+                var label = $(wrapper).find('.event-list-wrapper-cms').attr('id');
                 var prevText = '';
                 $.each(checkboxes, function (i, checkbox) {
                     var button = $(this).parents('.filter-dropdown').find('.filter-text');
